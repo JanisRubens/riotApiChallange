@@ -3,8 +3,8 @@ import React from "react";
 export default class Battle extends React.Component {
   constructor(props) {
     super(props);
-    this.summonerNameA = this.props.summonerNameA.toLowerCase();
-    this.summonerNameB= this.props.summonerNameB.toLowerCase();
+    this.summonerA = this.props.allData[this.props.summonerNameA.toLowerCase()];
+    this.summonerB = this.props.allData[this.props.summonerNameB.toLowerCase()];
     console.log(this.props);
     this.state = {
       allData: this.props.allData
@@ -13,10 +13,37 @@ export default class Battle extends React.Component {
 
   render() {
     return (
-        <div>
-            <h1>{this.state.allData[this.summonerNameA].name}</h1>
-            <h1>{this.state.allData[this.summonerNameB].name}</h1>
+      <div id="battle-wrapper">
+        <section className="summoner-data-wrapper">
+          <h2 className="title">{this.summonerA.name}</h2>
+          <div top-champ-wrapper>
+            <ul>
+              <li className="champions"></li>
+              <li className="champions"></li>
+              <li className="champions"></li>
+            </ul>
+          </div>
+          <div className="mastery-score">
+            <span></span>
+          </div>
+        </section>
+        <div id="separator-wrapper">
+        <figure id="vs-logo"></figure>
         </div>
+        <section className="summoner-data-wrapper">
+          <h2 className="title">{this.summonerB.name}</h2>
+          <div top-champ-wrapper>
+            <ul>
+              <li className="champions"></li>
+              <li className="champions"></li>
+              <li className="champions"></li>
+            </ul>
+          </div>
+          <div className="mastery-score">
+            <span></span>
+          </div>
+        </section>
+      </div>
     );
   }
 }

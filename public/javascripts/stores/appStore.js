@@ -13,7 +13,6 @@ class AppStore extends EventEmitter {
   
   
   handleSummonerData( allData ) {
-    window.data = allData;
     this.data = allData;
     this.emit("change");
   }
