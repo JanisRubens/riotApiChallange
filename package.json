@@ -13,7 +13,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./bin/www",
-    "build": "browserify -t [ babelify --presets [ es2015 react ] ] public/index.js -o build/app.js"
+    "build": "browserify -t [ babelify --presets [ es2015 react ] ] public/index.js -o public/app.js"
   },
   "dependencies": {
     "axios": "^0.11.0",
