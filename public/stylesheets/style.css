@@ -56,12 +56,30 @@ footer {
 .region.container {
     text-align: right;
 }
-.region select {
-    margin      : 30px 30px 0 0;
-    padding     : 3px 10px;
-    background  : none;
+.region.container .wrapper {
     border      : solid 1px #3B3225;
+    display     : inline-block;
+    padding     : 5px 18px 5px 10px;
+    margin      : 30px 30px 0 0;
+    position    : relative;
+}   
+.region.container .wrapper::after {
+    content : url("../images/arrow_down.png");
+    position: absolute;
+    top     : 3px;
+    right   : 8px;
+}
+.region.container .hider {
+    padding     : 0px;
+    width       : 40px;
+    overflow    : hidden;
+}
+.region select {
+    background  : none;
+    border      : none;
+    width       : 55px;
     color       : #B69853;
+    cursor      : pointer;
 }
 
 /* page 1 */
