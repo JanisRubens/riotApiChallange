@@ -26,7 +26,7 @@ export default class Page_one extends React.Component {
 
   handleFormChange(key) {
     return function (event) {
-      console.log("InsideHandleFormchange", e.target.value);
+      console.log("InsideHandleFormchange", event.target.value);
       var state = {};
       state[key] = event.target.value;
       this.setState(state);
