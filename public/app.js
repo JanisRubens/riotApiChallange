@@ -26523,9 +26523,13 @@ var Form = function (_React$Component) {
               onChange: this.props.handleFormChange('summonerNameB') })
           ),
           _react2.default.createElement(
-            "button",
-            { id: "submit-button", type: "button", onClick: this.props.handleButtonPress.bind(this) },
-            "BATTLE"
+            "div",
+            { className: "submit button container" },
+            _react2.default.createElement(
+              "button",
+              { id: "submit-button", type: "button", onClick: this.props.handleButtonPress.bind(this) },
+              "BATTLE"
+            )
           )
         )
       );

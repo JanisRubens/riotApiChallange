@@ -40,7 +40,9 @@ export default class Form extends React.Component {
               value= {this.props.summonerNameB}
               onChange={this.props.handleFormChange('summonerNameB') } />
           </div>
-          <button id="submit-button" type="button" onClick= { this.props.handleButtonPress.bind(this) } >BATTLE</button>
+          <div className="submit button container">
+            <button id="submit-button" type="button" onClick= { this.props.handleButtonPress.bind(this) } >BATTLE</button>
+          </div>
         </form>
       </div>
     );

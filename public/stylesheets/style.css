@@ -154,8 +154,13 @@ footer {
     opacity : 1.0;
 }
 
+
+.page1 .submit.button.container {
+    display     : block;
+    text-align  : center;
+}
 .page1 #submit-button {
-    display: block;
+    display         : inline-block;
     font-family     : "Spiegelot";
     font-size       : 16px;
     padding         : 20px 65px;
