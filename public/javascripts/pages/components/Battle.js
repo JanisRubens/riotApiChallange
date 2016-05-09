@@ -18,7 +18,7 @@ export default class Battle extends React.Component {
           <h2 className="title">{this.summonerA.name}</h2>
           <div top-champ-wrapper>
             <ul>
-              <li className="champions"></li>
+              <li className="champions" src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Aatrox.png"></li>
               <li className="champions"></li>
               <li className="champions"></li>
             </ul>

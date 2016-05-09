@@ -24,7 +24,20 @@ router.route('/stats/:region/:id')
                 res.send(response.data );
             });
 
-    });   
+    });
+    
+    //rushed
+    router.route('/staticChampions/:region/')
+    .get(function (req, res) {
+        axios.get( riotApi.getStaticData( req.params.region ) )
+            .then(function (response) {
+                res.send(response.data );
+            })
+            .catch(function (response) {
+                res.send(response.data );
+            });
+
+    });      
     
 
 
