@@ -26370,7 +26370,7 @@ var Footer = function (_React$Component) {
       return _react2.default.createElement(
         "footer",
         null,
-        "Footer"
+        "This is a FREE 3rd-party software and is created to compete in league of legends api April 2016 challenge"
       );
     }
   }]);
@@ -26420,62 +26420,66 @@ var Form = function (_React$Component) {
         "div",
         null,
         _react2.default.createElement(
-          "select",
-          { id: "region", onChange: this.props.handleSelect.bind(this), value: this.props.region },
+          "div",
+          { className: "region container" },
           _react2.default.createElement(
-            "option",
-            { value: "br" },
-            "BR"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "eune" },
-            "EUNE"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "euw" },
-            "EUW"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "jp" },
-            "JP"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "kr" },
-            "KR"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "lan" },
-            "LAN"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "las" },
-            "LAS"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "na" },
-            "NA"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "oce" },
-            "OCE"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "ru" },
-            "RU"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "tr" },
-            "TR"
+            "select",
+            { id: "region", onChange: this.props.handleSelect.bind(this), value: this.props.region },
+            _react2.default.createElement(
+              "option",
+              { value: "br" },
+              "BR"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "eune" },
+              "EUNE"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "euw" },
+              "EUW"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "jp" },
+              "JP"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "kr" },
+              "KR"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "lan" },
+              "LAN"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "las" },
+              "LAS"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "na" },
+              "NA"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "oce" },
+              "OCE"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "ru" },
+              "RU"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "tr" },
+              "TR"
+            )
           )
         ),
         _react2.default.createElement(
@@ -26492,28 +26496,37 @@ var Form = function (_React$Component) {
           "form",
           null,
           _react2.default.createElement(
-            "span",
-            { className: "input-label" },
-            "YOUR SUMMONER"
+            "div",
+            { className: "summoner" },
+            _react2.default.createElement(
+              "span",
+              { className: "input-label" },
+              "YOUR SUMMONER"
+            ),
+            _react2.default.createElement("input", {
+              className: "input-field",
+              value: this.props.summonerNameA,
+              onChange: this.props.handleFormChange('summonerNameA') })
           ),
-          _react2.default.createElement("input", {
-            className: "input-field",
-            value: this.props.summonerNameA,
-            onChange: this.props.handleFormChange('summonerNameA') }),
+          _react2.default.createElement("div", { className: "summoner-vs" }),
+          _react2.default.createElement(
+            "div",
+            { className: "summoner" },
+            _react2.default.createElement(
+              "span",
+              { className: "input-label" },
+              "ENEMY SUMMONER"
+            ),
+            _react2.default.createElement("input", {
+              className: "input-field",
+              value: this.props.summonerNameB,
+              onChange: this.props.handleFormChange('summonerNameB') })
+          ),
           _react2.default.createElement(
             "button",
             { id: "submit-button", type: "button", onClick: this.props.handleButtonPress.bind(this) },
-            "GO"
-          ),
-          _react2.default.createElement(
-            "span",
-            { className: "input-label" },
-            "ENEMMY SUMMONER"
-          ),
-          _react2.default.createElement("input", {
-            className: "input-field",
-            value: this.props.summonerNameB,
-            onChange: this.props.handleFormChange('summonerNameB') })
+            "BATTLE"
+          )
         )
       );
     }

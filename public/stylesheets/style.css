@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color    : #212226;
     margin              : 50px;
@@ -5,15 +9,17 @@ body {
     margin              : 50px;
     color               : white;
 }
-   
+
 .video-overlay video {
     position    : fixed;
-    top         : 0;
-    left        : 0;
-    right       : 0;
-    bottom      : 0;
-    margin      : 0 auto;
-    width       : 100%
+    top         : 50%; 
+    left        : 50%;
+    min-width   : 100%; 
+    min-height  : 100%; 
+    width       : auto; 
+    height      : auto;
+    overflow    : hidden;
+    transform   : translateX(-50%) translateY(-50%);
 }
 .video-overlay::after { 
     content         : "";
@@ -31,14 +37,131 @@ body {
     border      : solid 1px #3B3225;
     min-width   : 100%;
     height      : calc(100vh - 105px);
+    min-height  : 400px;
+    min-width   : 550px;
 }
 footer {
-    display : block;
-    position: fixed;
-    bottom  : 0;
-    color   : yellow;
+    display         : block;
+    position        : fixed;
+    bottom          : 23px; 
+    color           : #3B3225;
+    font-family     : "Beaufor";
+    font-size       : 12px;
+    letter-spacing  : 2px;
+}
+
+
+/* Global */
+
+.region.container {
+    text-align: right;
+}
+.region select {
+    margin      : 30px 30px 0 0;
+    padding     : 3px 10px;
+    background  : none;
+    border      : solid 1px #3B3225;
+    color       : #B69853;
 }
 
 /* page 1 */
+.page1 #input-wrapper {
+    text-align: center;
+}
+.page1 .sub-title {
+    font-family     : "Beaufor";
+    font-size       : 20px;
+    color           : #B69853;
+    text-shadow     : 0px 0px 1px rgba(255, 255, 255, 0.4);
+    text-transform  : uppercase;
+    margin-top      : 50px;
+    letter-spacing  : 8px;
+}
 
+@media (min-width: 1190px) {
+    .page1 .sub-title::before, .page1 .sub-title::after {
+        line-height     : 14px;
+        vertical-align  : top;
+    }
+    .page1 .sub-title::before {
+        content         : url("../images/arrow_point_big_L.png");
+        padding-right   : 30px;
+    }
+    .page1 .sub-title::after {
+        content         : url("../images/arrow_point_big_R.png");
+        padding-left   : 30px;
+    }
+}
+
+.page1 .title {
+    font-family     : "Beaufor";
+    font-size       : 50px;
+    font-weight     : bold;
+    color           : #D3C7A9;
+    text-shadow     : 0px 0px 1px rgba(255, 255, 255, 0.4);
+    text-align      : center;
+    text-transform  : uppercase;
+    display         : inline-block;
+    margin-top      : 10px;
+    letter-spacing  : 5px;
+    max-width       : 700px;
+    line-height     : 55px;
+}
+
+.page1 form {
+    padding-top: 60px;
+}
+
+.page1 .summoner {
+    font-family     : "Spiegelot";
+    font-size       : 12px;
+    letter-spacing  : 3px;
+    text-align      : center;
+    display         : inline-block;
+    width           : 260px;
+    color           : #B69853;
+}
+.page1 .summoner .input-field {
+    width           : 100%;
+    background      : rgba(0,0,0,0.5);
+    border-radius   : 40px;
+    font-family     : "Spiegelot";
+    font-size       : 14px;
+    padding         : 15px 30px;
+    color           : #3B3225;
+    border          : solid 1px #3B3225;
+    margin-top      : 30px;
+    transition      : all 0.3s ease;
+}
+.page1 .summoner .input-field:hover,
+.page1 .summoner .input-field:focus {
+    color           : #B69853;
+    border-color    : #B69853;
+}
+
+.page1 .summoner-vs {
+    display             : inline-block;
+    width               : 36px;
+    height              : 36px;
+    padding             : 80px;
+    background          : url("../images/vs_light.png") no-repeat;
+    background-position : 50% 50%;
+    vertical-align      : middle;
+    opacity             : 0.3;
+    transition          : opacity 0.5s ease;
+}
+.page1 .summoner-vs:hover {
+    opacity : 1.0;
+}
+
+.page1 #submit-button {
+    display: block;
+    font-family     : "Spiegelot";
+    font-size       : 16px;
+    padding         : 20px 65px;
+    letter-spacing  : 2px;
+    background      : transparent;
+    border          : 1px solid #B69853;
+    color           : #B69853;
+}
 
