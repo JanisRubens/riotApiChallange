@@ -21,12 +21,10 @@ export default class Page_one extends React.Component {
 
   handleSelect(event) {
     this.setState({ region: event.target.value });
-    console.log(this.state.region);
   }
 
   handleFormChange(key) {
     return function (event) {
-      console.log("InsideHandleFormchange", e.target.value);
       var state = {};
       state[key] = event.target.value;
       this.setState(state);
@@ -34,12 +32,9 @@ export default class Page_one extends React.Component {
   }
 
   handleButtonPress(e) {
-    console.log("Called hanndleButton press", e);
     this.setState({
       loading: true
     });
-    console.log("button press",this.state);
-    console.log(this.state.region);
     AppActions.getSummonerData(this.state);
   }
 

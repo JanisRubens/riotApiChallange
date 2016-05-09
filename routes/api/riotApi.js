@@ -68,11 +68,15 @@ module.exports = {
         else
             return HOST + "/championmastery/location/" + platformId + "/player/" + playerId + "/topchampions?api_key=" + KEY;
     },
-    
+
     //gotToFinishFast
     //Just so you know, its 4AM and i am out of energy drink and i have no idea what i am doing Kappa
-    getLeagueStatsByPlayerId: function ( region, playerId ) {
+    getLeagueStatsByPlayerId: function (region, playerId) {
         return HOST + "/api/lol/" + region + "/v2.5/league/by-summoner/" + playerId + "/entry?api_key=" + KEY;
+    },
+
+    getStaticData: function (region) {
+        return HOST + "/api/lol/static-data/" + region + "/v1.2/champion?dataById=true&api_key=" + KEY;
     }
 
 }
