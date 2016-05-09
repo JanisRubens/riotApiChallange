@@ -1,0 +1,26 @@
+@font-face {
+    font-family : "Beaufor";
+    src         : url("../fonts/beaufortforlol-regular.otf");
+    font-weight : normal;
+}
+@font-face {
+    font-family : "Beaufor";
+    src         : url("../fonts/beaufortforlol-bold.otf");
+    font-weight : bold;
+}
+
+@font-face {
+    font-family : "Spiegelot";
+    src         : url("../fonts/spiegelot-regular.otf");
+    font-weight : normal;
+}
+@font-face {
+    font-family : "Spiegelot";
+    src         : url("../fonts/spiegelot-semibold.otf");
+    font-weight : 500;
+}
+@font-face {
+    font-family : "Spiegelot";
+    src         : url("../fonts/spiegelot-bold.otf");
+    font-weight : bold;
+}

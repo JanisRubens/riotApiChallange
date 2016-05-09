@@ -76,7 +76,7 @@ export default class Page_one extends React.Component {
     }
     else {
       return (
-        <div>
+        <div className="page1">
           <div className="video-overlay">
             <video loop autoPlay>
               <source src="../../images/intro.mp4" type="video/mp4"></source>
