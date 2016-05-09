@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute, browserHistory } from "react-router";
 
 import Layout from "./javascripts/pages/Layout";
-import Page_one from "./javascripts/pages/Page_one";
-import Page_two from "./javascripts/pages/Page_two";
-import Page_three from "./javascripts/pages/Page_three";
+import Page_one from "./javascripts/pages/page_one";
+import Page_two from "./javascripts/pages/page_two";
+import Page_three from "./javascripts/pages/page_three";
 
 const app = document.getElementById('app');
 
