@@ -37,8 +37,13 @@ body {
     border      : solid 1px #3B3225;
     min-width   : 100%;
     height      : calc(100vh - 105px);
-    min-height  : 560px;
+    min-height  : 700px;
     min-width   : 550px;
+}
+@media (min-width: 800px) {
+    #input-wrapper {
+        min-height: 560px;
+    }
 }
 footer {
     display         : block;
@@ -55,6 +60,11 @@ footer {
 
 .region.container {
     text-align: right;
+}
+@media (min-width: 1981px) {
+    .region.container {
+        text-align: center;
+    }
 }
 .region.container .wrapper {
     border      : solid 1px #3B3225;
@@ -159,9 +169,10 @@ footer {
 
 .page1 .summoner-vs {
     display             : block;
+    margin              : 0 auto;
     width               : 36px;
     height              : 36px;
-    padding             : 80px;
+    padding             : 40px;
     background          : url("../images/vs_light.png") no-repeat;
     background-position : 50% 50%;
     vertical-align      : middle;
@@ -170,7 +181,9 @@ footer {
 }
 @media (min-width: 800px) {
     .page1 .summoner-vs {
-        display: inline-block;
+        display : inline-block;
+        margin  : 0;
+        padding : 80px;
     }
 }
 .page1 .summoner-vs:hover {
@@ -186,6 +199,7 @@ footer {
     display         : inline-block;
     font-family     : "Spiegelot";
     font-size       : 16px;
+    margin-top      : 30px;
     padding         : 20px 55px;
     letter-spacing  : 2px;
     background      : transparent;
@@ -201,5 +215,10 @@ footer {
 .page1 #submit-button::after {
     content         : url("../images/arrow_right.png");
     padding-left    : 20px;
+}
+@media (min-width: 800px) {
+    .page1 #submit-button {
+        margin-top: 0px;
+    }
 }
 
