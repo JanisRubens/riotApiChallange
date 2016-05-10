@@ -37,8 +37,13 @@ body {
     border      : solid 1px #3B3225;
     min-width   : 100%;
     height      : calc(100vh - 105px);
-    min-height  : 400px;
+    min-height  : 700px;
     min-width   : 550px;
+}
+@media (min-width: 800px) {
+    #input-wrapper {
+        min-height: 560px;
+    }
 }
 footer {
     display         : block;
@@ -56,12 +61,35 @@ footer {
 .region.container {
     text-align: right;
 }
-.region select {
-    margin      : 30px 30px 0 0;
-    padding     : 3px 10px;
-    background  : none;
+@media (min-width: 1981px) {
+    .region.container {
+        text-align: center;
+    }
+}
+.region.container .wrapper {
     border      : solid 1px #3B3225;
+    display     : inline-block;
+    padding     : 5px 18px 5px 10px;
+    margin      : 30px 30px 0 0;
+    position    : relative;
+}   
+.region.container .wrapper::after {
+    content : url("../images/arrow_down.png");
+    position: absolute;
+    top     : 3px;
+    right   : 8px;
+}
+.region.container .hider {
+    padding     : 0px;
+    width       : 40px;
+    overflow    : hidden;
+}
+.region select {
+    background  : none;
+    border      : none;
+    width       : 55px;
     color       : #B69853;
+    cursor      : pointer;
 }
 
 /* page 1 */
@@ -140,18 +168,26 @@ footer {
 }
 
 .page1 .summoner-vs {
-    display             : inline-block;
+    display             : block;
+    margin              : 0 auto;
     width               : 36px;
     height              : 36px;
-    padding             : 80px;
+    padding             : 40px;
     background          : url("../images/vs_light.png") no-repeat;
     background-position : 50% 50%;
     vertical-align      : middle;
     opacity             : 0.3;
-    transition          : opacity 0.5s ease;
+    transition          : all 1s ease;
+}
+@media (min-width: 800px) {
+    .page1 .summoner-vs {
+        display : inline-block;
+        margin  : 0;
+        padding : 80px;
+    }
 }
 .page1 .summoner-vs:hover {
-    opacity : 1.0;
+    opacity     : 1.0;
 }
 
 
@@ -163,10 +199,26 @@ footer {
     display         : inline-block;
     font-family     : "Spiegelot";
     font-size       : 16px;
-    padding         : 20px 65px;
+    margin-top      : 30px;
+    padding         : 20px 55px;
     letter-spacing  : 2px;
     background      : transparent;
     border          : 1px solid #B69853;
     color           : #B69853;
+    cursor          : pointer;
+    opacity         : 0.5;
+    transition      : opacity 0.3s ease;
+}
+.page1 #submit-button:hover {
+    opacity         : 1;
+}
+.page1 #submit-button::after {
+    content         : url("../images/arrow_right.png");
+    padding-left    : 20px;
+}
+@media (min-width: 800px) {
+    .page1 #submit-button {
+        margin-top: 0px;
+    }
 }
 

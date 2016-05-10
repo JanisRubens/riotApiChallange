@@ -7,20 +7,24 @@ export default class Form extends React.Component {
     return (
       <div>
         <div className="region container">
-          <select id="region" onChange ={ this.props.handleSelect.bind(this) } value = {this.props.region}>
-            <option value="br">BR</option>
-            <option value="eune">EUNE</option>
-            <option value="euw">EUW</option>
-            <option value="jp">JP</option>
-            <option value="kr">KR</option>
-            <option value="lan">LAN</option>
-            <option value="las">LAS</option>
-            <option value="na">NA</option>
-            <option value="oce">OCE</option>
-            <option value="ru">RU</option>
-            <option value="tr">TR</option>
+          <div className="wrapper">
+            <div className="hider">
+              <select id="region" onChange ={ this.props.handleSelect.bind(this) } value = {this.props.region}>
+                <option value="br">BR</option>
+                <option value="eune">EUNE</option>
+                <option value="euw">EUW</option>
+                <option value="jp">JP</option>
+                <option value="kr">KR</option>
+                <option value="lan">LAN</option>
+                <option value="las">LAS</option>
+                <option value="na">NA</option>
+                <option value="oce">OCE</option>
+                <option value="ru">RU</option>
+                <option value="tr">TR</option>
 
-          </select>
+              </select>
+            </div>
+          </div>
         </div>
         <h4 className="sub-title">LEAGUE OF LEGENDS</h4>
         <h2 className="title">CHAMPION MASTERY BATTLE</h2>
